@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Levi McGlone — Resume</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #2563eb;
+      --text: #1a1a1a;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #ffffff;
+      --section-gap: 2.5rem;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      padding: 3rem 1.5rem;
+    }
+
+    .page {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 2px solid var(--text);
+      padding-bottom: 1.25rem;
+      margin-bottom: var(--section-gap);
+    }
+
+    header h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      margin-top: 0.6rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover { text-decoration: underline; }
+
+    /* ── Sections ── */
+    section { margin-bottom: var(--section-gap); }
+
+    section h2 {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 1.75rem; }
+    .job:last-child { margin-bottom: 0; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.25rem;
+    }
+
+    .job-title {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .job-company {
+      font-size: 1rem;
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .job-dates {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .job ul {
+      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+    }
+
+    .job li {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      margin-bottom: 0.3rem;
+      color: #2d2d2d;
+    }
+
+    .job li:last-child { margin-bottom: 0; }
+
+    /* sub-bullets */
+    .job li ul {
+      margin-top: 0.25rem;
+      padding-left: 1.25rem;
+      list-style: circle;
+    }
+
+    .job li ul li {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* ── Education ── */
+    .edu-line {
+      font-size: 0.9375rem;
+    }
+
+    /* ── Accomplishments ── */
+    .awards ul {
+      padding-left: 1.25rem;
+    }
+
+    .awards li {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+      margin-bottom: 0.2rem;
+    }
+
+    /* ── Print ── */
+    @media print {
+      body { padding: 0; }
+      .page { max-width: 100%; }
+    }
+
+    @media (max-width: 540px) {
+      header h1 { font-size: 1.75rem; }
+      .job-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <h1>Levi McGlone</h1>
+    <div class="contact">
+      <a href="#" id="email-link">Email</a>
+      <a href="https://github.com/mcglonelevi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/levi-mcglone-83a1a764/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="UpdatedResume.docx" download>Download Resume</a>
+    </div>
+  </header>
+
+  <section class="summary">
+    <h2>Summary</h2>
+    <p>Staff Software Engineer with 8+ years of experience building high-impact software on web and mobile. I have a track record of technical leadership and delivering products that increased revenue, improved conversion, and scaled to thousands of users. I bring deep experience in developer tooling, CI/CD, and platform architecture.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Staff Engineer</span> &mdash; <span class="job-company">Wistia</span></span>
+        <span class="job-dates">October 2022 – Present</span>
+      </div>
+      <ul>
+        <li>Founding engineer on Wistia's recording product.</li>
+        <li>Architected and built single-user and multi-user recording applications using React, Ruby on Rails, LiveKit, and Remotion.</li>
+        <li>Scaled the application from 0 to thousands of users per month.</li>
+        <li>Reduced test flakes in CI by 95% by integrating RWX Captain to track test flakes.</li>
+        <li>Increased test coverage from 70% → 95% in Wistia's UI framework.</li>
+        <li>Converted internal libraries from JavaScript to 100% TypeScript.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Staff Engineer</span> &mdash; <span class="job-company">Lower.com</span></span>
+        <span class="job-dates">November 2021 – October 2022</span>
+      </div>
+      <ul>
+        <li>Oversaw a team of 7 engineers to rebuild Lower's mortgage application process in React and .NET Core 6, improving conversion by 50%.</li>
+        <li>Architected Lower.com's user portal using Blazor and .NET Core 6.</li>
+        <li>Led a team of 12 engineers on an implementation that included a white-labelled customer experience for partnering companies.</li>
+        <li>Built and maintained the frontend CI/CD platform using GitHub Actions, Docker, and AWS ECR.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Senior Engineer</span> &mdash; <span class="job-company">Huckleberry Insurance</span></span>
+        <span class="job-dates">May 2021 – November 2021</span>
+      </div>
+      <ul>
+        <li>Individual contributor on a team of 11 engineers rebuilding the sales and admin applications in React and Ruby on Rails.</li>
+        <li>Improved revenue by 400% through better customer-facing UX.</li>
+        <li>Increased sales and operations efficiency by automating daily tasks.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Engineering Manager, Productivity Team</span> &mdash; <span class="job-company">Root Insurance</span></span>
+        <span class="job-dates">May 2020 – May 2021</span>
+      </div>
+      <ul>
+        <li>Managed a team of 4 direct reports building tools and integrations to help teams ship code faster in a 1.1-million-line React Native application.</li>
+        <li><strong>Branch Runner</strong> – CLI and build tool to run arbitrary JS bundles for a React Native app, improving developer experience.</li>
+        <li><strong>Sentry Integration</strong> – Rebuilt libraries for managing and reporting errors to a 3rd-party service, improving grouping, assignment, and tracking of production errors.</li>
+        <li><strong>CI Platform</strong> – Built and maintained the CI platform running a matrix of integration tests verifying backend deployments against 10 supported app versions + dev build.</li>
+        <li><strong>Mobile Build &amp; Deploy Pipeline</strong> – Automated the mobile app build and deployment process with Fastlane following Google and Apple best practices.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Senior Engineer</span> &mdash; <span class="job-company">Root Insurance</span></span>
+        <span class="job-dates">February 2019 – May 2020</span>
+      </div>
+      <ul>
+        <li>Built multiple greenfield applications in React Native + Ruby on Rails:
+          <ul>
+            <li><strong>Myles</strong> – Roadside assistance application</li>
+            <li><strong>On My Way</strong> – Safety app for friends and family</li>
+            <li><strong>Voyager</strong> – Gamified safe-driving app for the Japanese market</li>
+          </ul>
+        </li>
+        <li>Individual contributor on major features in the Root mobile application:
+          <ul>
+            <li><strong>Homeowner's Insurance</strong> – Built the React Native frontend.</li>
+            <li><strong>App Rebrand</strong> – Built core hooks, utilities, and components used by all teams at Root.</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Software Engineer</span> &mdash; <span class="job-company">IQVentures</span></span>
+        <span class="job-dates">February 2018 – February 2019</span>
+      </div>
+      <ul>
+        <li>Developed custom applications for the financial services and telecommunications industries using PHP, MySQL, Memcached, JavaScript, Bootstrap, and jQuery.</li>
+        <li>Discovered and fixed critical security vulnerabilities in an internal PHP framework.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <span><span class="job-title">Software Engineer</span> &mdash; <span class="job-company">Buckeye Interactive</span></span>
+        <span class="job-dates">January 2017 – February 2018</span>
+      </div>
+      <ul>
+        <li>Developed custom web applications for agency clients using Laravel, WordPress, React, and Vue.</li>
+        <li>Developed and maintained a suite of DevOps tools based on Ubuntu Server 16.04, Ansible, Docker, and GOSS.</li>
+        <li>Managed hundreds of servers and applications hosted in AWS.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+    <p class="edu-line"><strong>B.S. in Web Development</strong>, Franklin University &mdash; December 2017</p>
+  </section>
+
+  <section class="awards">
+    <h2>Accomplishments &amp; Awards</h2>
+    <ul>
+      <li>Eagle Scout, Boy Scouts of America</li>
+      <li>National Youth Leadership Training, Boy Scouts of America</li>
+      <li>Hugh O'Brian Youth Leadership Training</li>
+      <li>Toastmaster's Youth Leadership Training</li>
+    </ul>
+  </section>
+
+</div>
+<script>
+const base64EmailString = "bWFpbHRvOm1jZ2xvbmVsZXZpQGdtYWlsLmNvbQ==";
+document.getElementById('email-link').href = atob(base64EmailString);
+</script>
+</body>
+</html>
